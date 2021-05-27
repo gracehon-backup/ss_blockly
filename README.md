@@ -2,9 +2,9 @@
 
 This documentation showcases the main steps of how to create blocks for the SenseStudy platform with Javascript.
 
-## Step 1
+## Step 1 - Writing Down the Source Code in Python
 
-Write down the Python source code of the experiment. Then test it out first on SenseStudy to make sure that there are no apparent errors made.
+Write down the Python source code of the experiment. Then, test it out first on SenseStudy to make sure that there are no apparent errors made.
 For example, for the "AI Smart Fan" experiment, the source code has been written prior to blocks being developed.
 
 ```python
@@ -85,7 +85,11 @@ cv2.destroyAllWindows()
 videostream.release()
 ```
 
-## Usage
+## Step 2 - Download the Templates for Block Creation
+After testing and making sure that the source code works, you can now get started on creating blocks! Download the "DynamicBlock" folder, and you will see that there are generally two ways to prepare the blocks: Automatically (via Markdown) and Manually. 
+
+For the blocks that cannot be generated automatically, please refer to the block code template in “Blocks_need_manul.js” and “Blocks_need_manul.xml”.  
+
 
 ```python
 import foobar
