@@ -91,21 +91,9 @@ After testing and making sure that the source code works, you can now get starte
 
 For the blocks that cannot be generated automatically, please refer to the block code template in “Blocks_need_manul.js” and “Blocks_need_manul.xml”.  
 
-| Category      | Action | Detection |
-| ----------- | ----------- | ----------- |
-| Blockly.defineBlocksWithJsonArray      |  previousStatement: null,
-        nextStatement: null,	        | output: "Boolean",
-outputShape: Blockly.OUTPUT_SHAPE_ROUND,       |
-| Blockly.Python   | return …+ "\n";        | var order = Blockly.Python.ORDER_ATOMIC;
-        return [code, order];       |
-| Use cases   | In Python environment: No need to assign it to other variables. 
-In Block environment: No need to assign it to other blocks.         | In Python environment: need to assign it to other variables. 
-
-In Block environment: need to assign it to other blocks.        |
-
 
 ## Case 1: Renaming an existing block in the template
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+```Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
