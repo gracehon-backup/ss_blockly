@@ -7,7 +7,8 @@ This documentation showcases the main steps of how to create blocks for the Sens
 Write down the Python source code of the experiment. Then test it out first on SenseStudy to make sure that there are no apparent errors made.
 For example, for the "AI Smart Fan" experiment, the source code has been written prior to blocks being developed.
 
-```from CourseHeader.API import *
+```python
+from CourseHeader.API import *
 from CourseHeader.utils.FaceDetector import detect_face
 from threading import Thread
 from time import sleep
