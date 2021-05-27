@@ -5,7 +5,8 @@ This documentation showcases the main steps of how to create blocks for the Sens
 ## Step 1 - Writing Down the Source Code in Python
 
 Write down the Python source code of the experiment. Then, test it out first on SenseStudy to make sure that there are no apparent errors made.
-For example, for the "AI Smart Fan" experiment, the source code has been written prior to blocks being developed.
+
+For example, for the "AI Smart Fan" experiment, the following source code has been written prior to the blocks being developed.
 
 ```python
 from CourseHeader.API import *
@@ -90,7 +91,6 @@ After testing and making sure that the source code works, you can now get starte
 
 For the blocks that cannot be generated automatically, please refer to the block code template in “Blocks_need_manul.js” and “Blocks_need_manul.xml”.  
 
-
 ```python
 import foobar
 
@@ -99,7 +99,7 @@ foobar.pluralize('goose') # returns 'geese'
 foobar.singularize('phenomena') # returns 'phenomenon'
 ```
 
-## Contributing
+## Case 1: Renaming an existing block in the template
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
