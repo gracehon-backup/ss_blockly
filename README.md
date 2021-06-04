@@ -9,14 +9,6 @@ Write down the Python source code of the experiment. Then, test it out first on 
 For example, for the "AI Smart Fan" experiment, the following source code has been written prior to the blocks being developed.
 
 ```python
-from CourseHeader.API import *
-from CourseHeader.utils.FaceDetector import detect_face
-from threading import Thread
-from time import sleep
-import sys
-import traceback
-
-
 frame = None
 target_x = None
 videostream = cv2.VideoCapture(0)
@@ -52,38 +44,8 @@ def direction_judge():
             motor_c.run_time(35,0.01)
         sleep(0.5)
 
-direction_judge_thread = Thread(target=direction_judge, args=(), daemon=True)
-direction_judge_thread.start()
-
-motor_a = Motor("A")
-def distance_judge(width):
-    if width > 280:
-        motor_a.run_time(40,1)
-    elif width > 180:
-        motor_a.run_time(60,1)
-    elif width > 100:
-        motor_a.run_time(80,1)
-        
-def fan_tracking():
-    global target_x
-    target_x,width = face_parameter()
-    if width:
-        distance_judge(width)
-
 read_frame_thread = Thread(target=read_frame, args=(), daemon=True)
 read_frame_thread.start()
-
-while True:
-    try:
-        fan_tracking()
-    except:
-        print(sys.exc_info())
-        break
-
-# Clean up
-print("clean")
-cv2.destroyAllWindows()
-videostream.release()
 ```
 
 ## Step 2 - Download the Templates for Block Creation
