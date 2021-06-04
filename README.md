@@ -30,22 +30,15 @@ def face_parameter():
         return target_x,width
     else:
         return None,None
+        
+read_frame_thread = Thread(target=read_frame, args=(), daemon=True)
+read_frame_thread.start()
+
 target_x,width = face_parameter()
 print("target_x and width is: ",target_x,width)
 
 motor_c = Motor("C")
-def direction_judge():
-    global target_x
-    while True:
-        print(target_x)
-        if target_x and target_x < 200:
-            motor_c.run_time(-35,0.01)
-        elif target_x and target_x > 450:
-            motor_c.run_time(35,0.01)
-        sleep(0.5)
-
-read_frame_thread = Thread(target=read_frame, args=(), daemon=True)
-read_frame_thread.start()
+motor_c.run_time(-35,0.01)
 ```
 
 ## Step 2 - Download the Templates for Block Creation
